@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# 🚀 Mini CRM System (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The client-side application for a simplified CRM system. This app allows users to register, log in, and manage business deals (view the list and add new ones).
 
-Currently, two official plugins are available:
+Built with **TypeScript** using a modern scalable stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## React Compiler
+*   **Core:** [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+*   **Build Tool:** [Vite](https://vitejs.dev/)
+*   **State Management:** [Redux Toolkit](https://redux-toolkit.js.org/) 
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Routing:** [React Router DOM](https://reactrouter.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Features
 
-## Expanding the ESLint configuration
+The application consists of three main modules:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Landing Page**
+    *   Welcome page describing the service.
+    *   Navigation to Login/Register.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Authentication Module**
+    *   **Registration:** Form to create a new user account.
+    *   **Login:** User authentication (JWT handling).
+    *   Form validation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **CRM Dashboard (Protected Area)**
+    *   **Deals List:** Displaying current deals (Grid or List view).
+    *   **Add Deal:** Interface to create a new deal (Title, Budget, Status).
+    *   **Route Protection:** Access to the dashboard is restricted to authenticated users only.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Follow these instructions to set up the project locally.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
+*   Node.js (v18 or higher)
+*   Running Backend API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vladimirugol/frontcrm.git
+   cd frontcrm

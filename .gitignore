@@ -25,7 +25,8 @@ dist-ssr
 public
 eslint.config.js
 package.json
-README.md
+
 tsconfig.json
 tsconfig.app.json
 vite.config.ts
+package-lock.json
